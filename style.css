@@ -1,0 +1,192 @@
+/* Initial setup for the page */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+
+* {
+    font-family: 'Baloo Tammudu 2', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Getting the top background image to the top of the page and adding some opacity. Also setting up transitions to have the headline and statement fade in on load from script.js */
+
+.top_section {
+    background-image: url('./images/top_background.jpg');
+    background-size: cover;
+    height: 100vh;
+    transition: all 1000ms ease-in;
+    align-items: center;
+}
+
+.headline, .statement {
+    transition: all 1000ms ease-in;
+    opacity: 0;
+}
+
+.top_section_loaded {
+    opacity: 1;
+}
+
+.top_section::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Styles for the navbar, and getting it to stay at the top of the window even when scrolling. */
+
+.navbar {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 4rem;
+    background-color:darkslategray;
+    position: sticky;
+    top: 0px;
+    align-items: center;
+}
+
+.header_img {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    padding: 0px 0px 0px 20px;
+}
+
+.header_name {
+    margin-right: auto;
+    padding-left: 20px;
+    font-size: 1.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+header a {
+    color: #edf0f1;
+}
+
+.navlist {
+    list-style: none;
+}
+
+.navlist li {
+    display: inline-block;
+    padding: 0px 25px;
+    text-decoration: none;
+}
+
+.navlist li:hover {
+    cursor: pointer;
+}
+
+.navlist li a {
+    transition: all 0.3s ease 0s;
+}
+
+/* Styles for the healine image, name, and statement. Basic placement on the page. */
+
+.headline {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    padding-top: 150px;
+}
+
+.headline h1 {
+    font-weight: 500;
+    font-size: 3rem;
+    color: #edf0f1;
+}
+
+.headline img {
+    height: 75px;
+    width: 75px;
+    padding-right: 5px;
+}
+
+.statement {
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #edf0f1;
+}
+
+/* Setting up project list to be below the initial window, and setting each project up to fade in from the edge of the screen with Intersection Observers in script.js */
+
+.projects {
+    height: 2000px;
+    background-color: rgba(0,0,0,0.25);
+}
+
+.project1, .project2, .project3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+    padding-bottom: 15rem;
+    box-shadow: 0 3px 20px rgba(black, 0.2);
+}
+
+.project1 {
+    padding-top: 15rem;
+    transform: translateX(-50%);
+    transition: all 1000ms ease-in;
+    opacity: 0;
+}
+
+.project1 img {
+    height: 400px;
+    width: 400px;
+}
+
+.project1 p {
+    width: 20rem;
+}
+
+.project2 {
+    transform: translateX(50%);
+    transition: all 1000ms ease-in;
+    opacity: 0;
+}
+
+.project2 img {
+    height: 400px;
+    width: 400px;
+}
+
+.project2 p {
+    width: 20rem;
+}
+
+.project3 {
+    transform: translateX(-50%);
+    transition: all 1000ms ease-in;
+    opacity: 0;
+}
+
+.project3 img {
+    height: 400px;
+    width: 400px;
+}
+
+.project3 p {
+    width: 20rem;
+}
+
+.fade_in {
+    transform: translateX(0);
+    opacity: 1;
+}
