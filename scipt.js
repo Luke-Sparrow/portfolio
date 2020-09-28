@@ -2,6 +2,8 @@ const topSectionTitle = document.querySelector('.headline')
 
 const topSectionParagraph = document.querySelector('.statement')
 
+const scrollParagraph = document.querySelector('.scroll_paragraph')
+
 const projects = document.querySelectorAll('.fade')
 
 const topSectionOptions = {}
@@ -16,6 +18,12 @@ const topSectionObserver = new IntersectionObserver(function(entries, topSection
 },topSectionOptions)
 
 const topSectionObserver2 = new IntersectionObserver(function(entries, topSectionObserver2){
+    entries.forEach(entry => {
+        entry.target.classList.add('top_section_loaded')
+    })
+},topSectionOptions)
+
+const scrollParagraphObserver = new IntersectionObserver(function(entries, scrollParagraphObserver) {
     entries.forEach(entry => {
         entry.target.classList.add('top_section_loaded')
     })
@@ -36,6 +44,7 @@ const projectsObserver = new IntersectionObserver(function(entries, projectsObse
 
 topSectionObserver.observe(topSectionTitle)
 topSectionObserver2.observe(topSectionParagraph)
+scrollParagraphObserver.observe(scrollParagraph)
 projects.forEach(project => {
     projectsObserver.observe(project)
 })

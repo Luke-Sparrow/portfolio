@@ -10,46 +10,51 @@
 
 <body>
     <header class="navbar">
-        <img class='header_img' src="./images/final_icon.svg" alt="logo">
+        <a href="#"><img class='header_img' src="./images/final_icon.svg" alt="logo"></a>
         <a class='header_name' href="#">Luke Sparrow</a>
         <nav class="navblock">
             <ul class="navlist">
-                <li class="list_name"><a href="#">About</a></li>
-                <li class="list_projects"><a href="#">Projects</a></li>
-                <li class="list_contact"><a href="#">Contact</a></li>
+                <li class="list_name"><a href="#top_section">About</a></li>
+                <li class="list_projects"><a href="#projects">Projects</a></li>
+                <li class="list_contact"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="top_section">
+    <div class="top_section" id="top_section">
         <div class="headline">
             <img src="./images/final_icon.svg" alt="large logo">
             <h1>Luke Sparrow</h1>
         </div>
     
         <div class="statement">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, iusto ad quis quam asperiores, nihil eum repellat voluptatem consequatur numquam molestias ipsam corporis blanditiis tempora iste dicta. Earum, ratione ipsam!</p>
+            <p>After working in the tech industry for several years, I realized that I want to create the technology around me — not simply consume it. I used several open-source and community resources to pursue self-directed study in software development. I'm looking forward to creating meaningful products and learning something new every day.</p>
+            <p class="scroll_paragraph">Scroll to learn more about my Face Recognition, Pokefinder, and Background Generator projects.</p>
         </div>
     </div>
 
-    <div class='projects'>
+    <div class='projects' id="projects">
         <span class="fade project1">
-            <a href="#"><img src="./images/Project1.jpg" alt=""></a>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores eveniet, quis facilis voluptatem, rem maiores pariatur temporibus possimus quam distinctio minus? Fugit iusto corporis consequuntur et, nam voluptatum eum.</p>
+            <a href="https://sparrow-smart-brain.herokuapp.com/"><img src="./images/smart_brain.gif" alt=""></a>
+            <p>Click on the image, register an account, and check out my Face Recognition app! This is an app that takes a submitted image URL, sends it through the Clarifai API, and generates a box around the detected face in the image. I built this project from the ground up with HTML, CSS, JS, Node.js, Express, and PostgreSQL. It is currently hosted on Heroku (my free personal account) so stick with it if it doesn't load as fast as it could!</p>
         </span>
 
         <span class="fade project2">
-            <a href="#"><img src="./images/Project2.jpg" alt=""></a>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores eveniet, quis facilis voluptatem, rem maiores pariatur temporibus possimus quam distinctio minus? Fugit iusto corporis consequuntur et, nam voluptatum eum.</p>
+            <a href="https://luke-sparrow.github.io/Pokefinder/"><img src="./images/pokefinder.gif" alt=""></a>
+            <p>Click on the image to take a look at my simple react app, Pokefinder! This app dynamically updates state based on the user's input. That state is then used to communicate with the free PokeAPI to generate a series of cards that match the input. Created with React.js and hosted through GitHub pages.</p>
         </span>
 
         <span class="fade project3">
-            <a href="#"><img src="./images/Project3.jpg" alt=""></a>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores eveniet, quis facilis voluptatem, rem maiores pariatur temporibus possimus quam distinctio minus? Fugit iusto corporis consequuntur et, nam voluptatum eum.</p>
+            <a href="https://luke-sparrow.github.io/backgroundGradient/"><img src="./images/background.gif" alt=""></a>
+            <p>Click the image, and generate your own custom background gradient between two colors of your choice. This site is made using standard HTML, CSS, and JS. After selecting the two colors you would like to generate a gradient between, the site generates the necessary CSS for you to copy and paste into your own program. My Background Generator is currently hosted on GitHub pages.</p>
         </span>
 
     </div>
-    <footer>Contact Me</footer>
+    <footer id="contact">
+        <a href="#top_section"><img src="./images/final_icon.svg" alt="icon"></a>
+        <a href="#">Luke.Sparrow@pm.me</a>
+        <span><a href="https://github.com/Luke-Sparrow"><img class='git_icon' src="./images/github.svg" alt="github"></a></span>
+    </footer>
     <script src="./scipt.js"></script>
 </body>
 </html>

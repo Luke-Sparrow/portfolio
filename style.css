@@ -11,13 +11,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Getting the top background image to the top of the page and adding some opacity. Also setting up transitions to have the headline and statement fade in on load from script.js */
 
 .top_section {
     background-image: url('./images/top_background.jpg');
     background-size: cover;
     top: 0;
-    height: 100vh;
+    height: 75vh;
     transition: all 1000ms ease-in;
     align-items: center;
 }
@@ -27,19 +31,14 @@
     opacity: 0;
 }
 
+.scroll_paragraph {
+    opacity: 0;
+    transition: all 2000ms ease-in;
+}
+
 .top_section_loaded {
     opacity: 1;
 }
-
-/* .top_section::before {
-    content: '';
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.25);
-} */
 
 /* Styles for the navbar, and getting it to stay at the top of the window even when scrolling. */
 
@@ -52,6 +51,7 @@
     position: sticky;
     top: 0px;
     align-items: center;
+    z-index: 9999;
 }
 
 .header_img {
@@ -118,11 +118,15 @@ header a {
 }
 
 .statement {
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 15%;
+    margin-right: 15%;
     text-align: center;
     font-size: 1.5rem;
     color: #edf0f1;
+}
+
+.scroll_paragraph {
+    padding-top: 9rem;
 }
 
 /* Setting up project list to be below the initial window, and setting each project up to fade in from the edge of the screen with Intersection Observers in script.js */
@@ -136,12 +140,16 @@ header a {
     align-items: center;
     justify-content: space-evenly;
     padding: 2rem;
-    padding-bottom: 15rem;
-    box-shadow: 0 3px 20px rgba(black, 0.2);
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+    border-style: unset;
+}
+
+.project1, .project2, .project3 a {
+    box-shadow: 0 0.25 rgba(black, 0.2);
 }
 
 .project1 {
-    padding-top: 15rem;
     transform: translateX(-50%);
     transition: all 800ms ease-in;
     opacity: 0;
@@ -149,7 +157,7 @@ header a {
 
 .project1 img {
     height: 400px;
-    width: 400px;
+    width: 500px;
 }
 
 .project1 p {
@@ -165,7 +173,7 @@ header a {
 
 .project2 img {
     height: 400px;
-    width: 400px;
+    width: 500px;
 }
 
 .project2 p {
@@ -181,7 +189,7 @@ header a {
 
 .project3 img {
     height: 400px;
-    width: 400px;
+    width: 500px;
 }
 
 .project3 p {
@@ -198,7 +206,23 @@ header a {
 
 footer {
     display: flex;
-    height: 4vh;
-    justify-content: center;
+    height: auto;
+    justify-content: space-evenly;
     align-items: center;
+    background-color: darkslategray;
+}
+
+footer img {
+    height: 50px;
+    width: 50px;
+    padding-right: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #edf0f1;
+}
+
+.git_icon {
+    padding-top: 10px;
 }
