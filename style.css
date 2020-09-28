@@ -16,6 +16,7 @@
 .top_section {
     background-image: url('./images/top_background.jpg');
     background-size: cover;
+    top: 0;
     height: 100vh;
     transition: all 1000ms ease-in;
     align-items: center;
@@ -30,15 +31,15 @@
     opacity: 1;
 }
 
-.top_section::before {
+/* .top_section::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
     background-color: rgba(0, 0, 0, 0.25);
-}
+} */
 
 /* Styles for the navbar, and getting it to stay at the top of the window even when scrolling. */
 
@@ -92,7 +93,7 @@ header a {
 }
 
 .navlist li a {
-    transition: all 0.3s ease 0s;
+    transition: all 0.1s;
 }
 
 /* Styles for the healine image, name, and statement. Basic placement on the page. */
@@ -127,7 +128,6 @@ header a {
 /* Setting up project list to be below the initial window, and setting each project up to fade in from the edge of the screen with Intersection Observers in script.js */
 
 .projects {
-    height: 2000px;
     background-color: rgba(0,0,0,0.25);
 }
 
@@ -143,7 +143,7 @@ header a {
 .project1 {
     padding-top: 15rem;
     transform: translateX(-50%);
-    transition: all 1000ms ease-in;
+    transition: all 800ms ease-in;
     opacity: 0;
 }
 
@@ -153,12 +153,13 @@ header a {
 }
 
 .project1 p {
-    width: 20rem;
+    width: 30rem;
+    font-size: 1.3rem;
 }
 
 .project2 {
     transform: translateX(50%);
-    transition: all 1000ms ease-in;
+    transition: all 800ms ease-in;
     opacity: 0;
 }
 
@@ -168,12 +169,13 @@ header a {
 }
 
 .project2 p {
-    width: 20rem;
+    width: 30rem;
+    font-size: 1.3rem;
 }
 
 .project3 {
     transform: translateX(-50%);
-    transition: all 1000ms ease-in;
+    transition: all 800ms ease-in;
     opacity: 0;
 }
 
@@ -183,10 +185,20 @@ header a {
 }
 
 .project3 p {
-    width: 20rem;
+    width: 30rem;
+    font-size: 1.3rem;
 }
 
 .fade_in {
     transform: translateX(0);
     opacity: 1;
+}
+
+/* Final styling for the footer to include contact links */
+
+footer {
+    display: flex;
+    height: 4vh;
+    justify-content: center;
+    align-items: center;
 }
