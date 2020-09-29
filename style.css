@@ -127,6 +127,7 @@ header a {
 
 .scroll_paragraph {
     padding-top: 9rem;
+    padding-bottom: 5rem;
 }
 
 /* Setting up project list to be below the initial window, and setting each project up to fade in from the edge of the screen with Intersection Observers in script.js */
@@ -218,7 +219,7 @@ footer img {
     padding-right: 10px;
 }
 
-footer a {
+footer a, p {
     text-decoration: none;
     color: #edf0f1;
 }
