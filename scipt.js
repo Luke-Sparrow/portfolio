@@ -8,6 +8,7 @@ const projects = document.querySelectorAll('.fade')
 
 const topSectionOptions = {}
 const projectsOptions = {
+    threshold: 0.3,
     rootMargin: '0px 0px -250px 0px'
 }
 

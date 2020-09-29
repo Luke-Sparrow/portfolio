@@ -20,8 +20,10 @@ html {
 .top_section {
     background-image: url('./images/top_background.jpg');
     background-size: cover;
+    display: flex;
+    flex-direction: column;
     top: 0;
-    height: 75vh;
+    height: 100vh;
     transition: all 1000ms ease-in;
     align-items: center;
 }
@@ -54,15 +56,16 @@ html {
     z-index: 9999;
 }
 
-.header_img {
+header a img {
     height: 50px;
     width: 50px;
-    cursor: pointer;
-    padding: 0px 0px 0px 20px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .header_name {
     margin-right: auto;
+    padding-top: 10px;
     padding-left: 20px;
     font-size: 1.5rem;
 }
@@ -84,16 +87,17 @@ header a {
 
 .navlist li {
     display: inline-block;
-    padding: 0px 25px;
+    padding: 10px 25px 0px 0px;
     text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 300ms ease-in;
+    transform-origin: center;
 }
 
 .navlist li:hover {
     cursor: pointer;
-}
-
-.navlist li a {
-    transition: all 0.1s;
+    text-decoration: underline;
+    text-decoration-color: #edf0f1;
 }
 
 /* Styles for the healine image, name, and statement. Basic placement on the page. */
@@ -102,7 +106,7 @@ header a {
     display: flex;
     justify-content: center;
     padding: 50px;
-    padding-top: 150px;
+    padding-top: 100px;
 }
 
 .headline h1 {
@@ -126,8 +130,9 @@ header a {
 }
 
 .scroll_paragraph {
-    padding-top: 9rem;
-    padding-bottom: 5rem;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 20vh 0px 10vh 0px;
 }
 
 /* Setting up project list to be below the initial window, and setting each project up to fade in from the edge of the screen with Intersection Observers in script.js */
@@ -138,64 +143,79 @@ header a {
 
 .project1, .project2, .project3 {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 2rem;
-    padding-bottom: 10rem;
-    padding-top: 10rem;
-    border-style: unset;
+    padding: 0;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
 }
 
-.project1, .project2, .project3 a {
-    box-shadow: 0 0.25 rgba(black, 0.2);
+.project1 div, .project2 div, .project3 div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+.project1_title, .project2_title, .project3_title {
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: underline;
 }
 
 .project1 {
     transform: translateX(-50%);
-    transition: all 800ms ease-in;
+    transition: all 600ms ease-in;
     opacity: 0;
 }
 
-.project1 img {
+.project1 div a img {
     height: 400px;
     width: 500px;
 }
 
-.project1 p {
+.project1 div p {
     width: 30rem;
     font-size: 1.3rem;
+    color: black;
+    padding-left: 3rem;
 }
 
 .project2 {
     transform: translateX(50%);
-    transition: all 800ms ease-in;
+    transition: all 600ms ease-in;
     opacity: 0;
 }
 
-.project2 img {
+.project2 div img {
     height: 400px;
     width: 500px;
 }
 
-.project2 p {
+.project2 div p {
     width: 30rem;
     font-size: 1.3rem;
+    color: black;
+    padding-left: 3rem;
 }
 
 .project3 {
     transform: translateX(-50%);
-    transition: all 800ms ease-in;
+    transition: all 600ms ease-in;
     opacity: 0;
 }
 
-.project3 img {
+.project3 div img {
     height: 400px;
     width: 500px;
 }
 
-.project3 p {
+.project3 div p {
     width: 30rem;
     font-size: 1.3rem;
+    color: black;
+    padding-left: 3rem;
 }
 
 .fade_in {
